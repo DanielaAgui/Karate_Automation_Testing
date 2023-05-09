@@ -5,7 +5,6 @@ Feature: Get API demo
     * header Accept = 'application/json'
 
   Scenario: Simple Get Request
-
     #Url completa de la api
     Given url 'https://reqres.in/api/users?page=2'
     When method GET
@@ -18,7 +17,6 @@ Feature: Get API demo
     And print responseCookies
 
   Scenario: Get Request with background
-
     #Endpoint de la api
     Given path '/users?page=2'
     When method GET
@@ -26,7 +24,6 @@ Feature: Get API demo
     And print response
 
   Scenario: Get Request with path and params
-
     Given path '/users'
     #Parámetros a usar
     And param page = 2
