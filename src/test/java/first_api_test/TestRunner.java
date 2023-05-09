@@ -7,6 +7,6 @@ class TestRunner {
 
     public Karate curso() {
         //Ruta del archivo feature
-        return Karate.run("classpath:first_api_test/FirstTest.feature");
+        return Karate.run("classpath:first_api_test/first_api_test.feature");
     }
 }
