@@ -52,7 +52,7 @@ Feature: Post API demo
     And match response == expectedOutput
     And print response
 
-    Scenario: Post request read request from file and change values
+  Scenario: Post request read request from file and change values
       Given path '/users'
       #Leemos el archivo json de la request
       And def reqBody = read("request.json")
@@ -63,5 +63,19 @@ Feature: Post API demo
       Then status 201
       And match response == expectedOutput
       And print response
+
+  Scenario: Practica register successful Post request
+    Given path '/register'
+    And request {"email": "eve.holt@reqres.in","password": "pistol"}
+    When method POST
+    Then status 200
+    And print response
+
+  Scenario: Practica register unsuccessful Post Request
+    Given path '/register'
+    And request {"email": "sydney@fife"}
+    When method POST
+    Then status 400
+    And print response
 
 
