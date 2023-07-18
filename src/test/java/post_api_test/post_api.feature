@@ -64,18 +64,18 @@ Feature: Post API demo
       And match response == expectedOutput
       And print response
 
-  Scenario: Practica register successful Post request
-    Given path '/register'
-    And request {"email": "eve.holt@reqres.in","password": "pistol"}
-    When method POST
-    Then status 200
-    And print response
+    Scenario: Practica register successful Post request
+      Given path '/register'
+      And request {"email": "eve.holt@reqres.in","password": "pistol"}
+      When method POST
+      Then status 200
+      And print response
 
-  Scenario: Practica register unsuccessful Post Request
-    Given path '/register'
-    And request {"email": "sydney@fife"}
-    When method POST
-    Then status 400
-    And print response
+    Scenario: Practica register unsuccessful Post Request
+      Given path '/register'
+      And request {"email": "sydney@fife"}
+      When method POST
+      Then status 400
+      And print response
 
 
